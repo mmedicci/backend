@@ -11,7 +11,7 @@ const connectionString = 'mongodb+srv://mmedicci:d0RfWUjudHvCx6LO@cluster0.ayqus
 console.info('conectando ao banco de dados MongoDB');
 
 const options = {
-    useUnifiedTopology : true
+    
 
 };
 
@@ -40,7 +40,7 @@ const cadastros = db.collection('Cadastros');
 
 const getCadastrosValidos = () => cadastros.find({}).toArray();
 
-const getCadastroById = async id => await cadastros.findOne({_id: new ObjectId (id)});
+const getCadastroById = async id => await cadastros.findOne({ _id: new ObjectId(id) });
 
 
 //  [GET] /cadastros = retorno lista de cadastrados //
