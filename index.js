@@ -15,7 +15,11 @@ const options = {
 
 };
 
-const client =  await mongodb.MongoClient.connect(connectionString, options);
+/*const client =  await mongodb.MongoClient.connect(connectionString, options);*/
+
+const client = new MongoClient(connectionString);
+
+await client.connect();
 
 const app = express();
 
